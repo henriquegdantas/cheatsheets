@@ -28,7 +28,9 @@
     "test": "jest",
     "test:all": "run-s test lint",
     "lint": "standard -v",
-    "jest-html": "jest-html"
+    "jest-html": "jest-html",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
@@ -40,7 +42,8 @@
     "onmount": "1.3.0",
     "prettier": "1.11.1",
     "prismjs": "1.8.1",
-    "sanitize.css": "5.0.0"
+    "sanitize.css": "5.0.0",
+    "snyk": "^1.88.0"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -55,5 +58,6 @@
     "snapshotSerializers": [
       " <rootDir>/node_modules/jest-html"
     ]
-  }
+  },
+  "snyk": true
 }
